@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Vaccine Information</title>
+
+    
+    <style>
+
+html{
+  scroll-behavior: smooth;
+}
+      * {
+    margin: 0px;
+    padding: 0px;
+}
+
+.bgclr{
+  background-color: rgb(44, 45, 46);
+}
+
+.navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color:rgb(36, 44, 46) ;
+    color:rgb(178, 204, 212);
+    padding-top: 8px;
+    align-items: center;
+    justify-content: center;
+    font-family:"montserrat";
+    z-index: 1;
+    
+}
+
+.btn{
+  border: 3px solid #3498db;
+  background: none;
+  padding:10px 20px;
+  font-size: 20px;
+  font-family:"montserrat";
+  cursor:pointer;
+  margin:10px;
+  transition:0.7s;
+  color:#3498db
+  overflow:hidden;
+  box-sizing:border-box;
+
+}
+
+a{
+  position:relative;
+  text-decoration: none;
+  padding:0 10px;
+}
+a:after{
+  content:"";
+  position:absolute;
+  background-color: #3498db;
+  height:3px;
+  width:0;
+  left:0;
+  bottom:-5px;
+  transition:0.4s;
+}
+a:hover{
+  color:#ffffff
+}
+a:hover::after{
+  width:100%
+}
+
+
+.he {
+
+text-align: center;
+margin: 100px;
+background: -webkit-linear-gradient(rgb(0, 200, 255), rgb(3, 49, 255));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-size: 43px;
+font-family : "montserrat";
+margin-bottom: 50px;
+padding: 100;
+}
+
+.bg{
+background-image: url('bg1.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+padding-top: 5px;
+padding-bottom: 30px;
+}
+
+.bg2{
+background-image: url('bg2.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+padding-top: 15px;
+padding-bottom: 30px;}
+
+.bg3{
+background-image: url('bg1.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+padding-top: 5px;
+padding-bottom: 30px;
+justify-content:center;
+align-items:center;
+}
+
+.bg4{
+background-image: url('bg2.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+padding-top: 15px;
+padding-bottom: 30px;}
+
+
+.p1{
+  font-size: 26px;
+  color : white;
+  font-family : "montserrat";
+  background:rgb(101, 98, 100);
+  -webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+  padding-left:30px;
+  padding-right:30px;
+  text-align:justify;
+}
+.p2{
+  font-size: 21px;
+  color : rgb(101, 98, 100);
+  font-family : "montserrat";
+  padding-left:30px;
+  padding-right:30px;
+  text-align:justify;
+}
+
+.p3{
+  font-size: 21px;
+  color : rgb(101, 98, 100);
+  font-family : "montserrat";
+  padding-left:30px;
+  padding-right:30px;
+  text-align:justify;}
+
+.p3:hover{
+  color : rgb(255, 5, 5);
+}
+
+image{
+  display:block;
+  margin:0 auto;
+  transition:0.3s;
+}
+
+.container{
+  display:flex;
+
+}
+
+.card{
+  background-color: rgba(240, 234, 234, 0.42);
+  box-shadow:0 0 2em rgba(0, 0, 0, 0.219);
+  width:900px;
+  border-radius:4px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 190px;
+  transition: 0.8s;
+  border-color: #3498db;
+  border: 10px;
+}
+
+.card:hover {
+  
+  box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px var(--box-shadow-color);
+    border-radius: 10px;
+    border-color: aqua;
+    border-width: 3px;
+    background-color: #9fbed5;
+    width:950px;
+    margin-left: 180px;
+    
+   
+
+}
+
+.card_hero{
+  flex:0 0 50%;
+  position:relative;
+  justify-content: center;
+  align-items: center;
+  color:#ffffff;
+  font-family : "montserrat";
+ 
+ 
+}
+.card_content{
+  flex:1;
+  padding:35px 10px 10px 35px;
+  align:justify-content;
+  font-family : "montserrat";
+}
+.card_image{
+  display:block;
+  width:87%;
+  padding-left: 35px;
+  
+}
+.card_middle{
+  position:absolute;
+  top:85%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-family : "montserrat";
+  
+}
+.card_middle-text{
+  background-color: #347db2;
+  font-size: 15px;
+  color:#ffffff;
+  font-family : "montserrat";
+  font-weight: 400;
+  border-radius: 5px;
+  padding: 7px 10px;
+  box-shadow: 0 0 0.9375em rgba(0, 0, 0, 0.219);
+ 
+  
+}
+.card_price{
+  font-size:30px;
+  font-family: "montserrat" ;
+  font-weight: 300;
+  color: black;
+  
+}
+.card_address{
+  align-items:justify;
+  font-family: "montserrat" ;
+  font-size:15px;
+  color: #576066;
+}
+
+.lst1{
+  font-family: "montserrat" ;
+  font-size:15px;
+  color: #576066;
+}
+
+
+
+
+    </style>
+  </head>
+
+
+<body link="white" vlink="white" alink="red" class="bgclr" > 
+   
+    <nav class="navbar" align="center">
+      <div><h3> <font size="10%">PUBLIC HEALTH RESPONSE PLATFORM</font></h3> <h2><font><button class = "btn"><a href="#home">HOME</a> </button> </font>&nbsp&nbsp&nbsp&nbsp <font> <button class = "btn"><a href="#vaccines">VACCINES</a> </button> 
+      </font></h2></div>
+  </nav>
+  <section class="bg" id="home" data-aos="fade-in">
+
+    <div data-aos="fade-in" class="he">
+    <h1 >WHAT ARE VACCINES?</h1></div><br>
+
+    <div align = "center" data-aos="fade-in">
+      <img src = "img3.jpg" width = "80%">
+
+    </div>
+    
+      <p class="p1" data-aos="fade-in"><b>Vaccines are biological preparations that provide active acquired immunity to a particular disease. They contain a weakened or dead form of a pathogen, such as a virus or bacteria, or a piece of the pathogen's genetic material. When a person is vaccinated, their immune system recognizes the pathogen and produces a response, including the production of antibodies. This prepares the immune system to rapidly recognize and fight the pathogen if the person is exposed to it in the future, reducing the severity or preventing the disease altogether.<br></b></p>
+  </section>
+  <br><br>
+  
+
+
+  <section class="bg2" data-aos="fade-in" >
+      <h1 class="he" data-aos="fade-in">HOW ARE VACCINES HELPFUL?</h1><br>
+      
+      <p class="p1" data-aos="fade-in"><b>Vaccines are incredibly helpful in protecting people against infectious diseases and promoting public health. Some of the benefits of vaccines include: <br><br>
+        <ol class="p2" data-aos="fade-in">
+          <li>
+            Disease prevention: Vaccination helps protect individuals from serious and potentially life-threatening diseases by triggering an immune response that can prevent or reduce the severity of disease if a person is exposed to the pathogen in the future.
+          </li><br>
+          <li>
+            Herd immunity: When enough people in a community are vaccinated against a disease, it becomes much harder for the disease to spread, as there are fewer people for the pathogen to infect. This can help protect those who are unable to receive vaccines, such as young infants or people with certain medical conditions.
+          </li><br>
+          <li >
+            Global health: Vaccination has been instrumental in eradicating diseases such as smallpox and has significantly reduced the burden of many other infectious diseases. By preventing the spread of diseases, vaccines help improve global health and reduce the economic and social burden of disease.
+          </li>
+
+      </b></p>
+    </section>
+    <br><br><br><br>
+
+  <section data-aos="fade-in" align = "center">
+    <img src = "img.jpg" width = "80%">
+  </section>
+  <br><br><br>
+
+
+  <section  class = "bg4">
+    <div data-aos="fade-in" class="he">
+      <h1>VACCINES SUITABLE FOR YOU</h1></div><br>
+      <div data-aos="fade-in">
+      <p class="p1"><b> Click on the link which is applicable for you:</b></p><br>
+        <ul>
+          <li><a href="#HPV"><P class="p3">1. IS YOUR AGE LESS THAN 26 YEARS?</P></a></li>
+          <li><a href="#FLU"><P class="p3">2. DID YOU RECENTLY TOOK THE FLU VACCINE?</P></a></li>
+          <li><a href="#TDAP"><P class="p3">3. DID YOU RECENTLY TOOK THE TDAP VACCINE?</P></a></li>
+          <li><a href="#POX"><P class="p3">4. DID YOU EVER HAD CHICKEN POX?</P></a></li>
+          <li><a href="#ZOSTER"><P class="p3">5. IS YOUR AGE OVER 50 YEARS?</P></a></li>
+          <li><a href="#FEVER"><P class="p3">6. ARE YOU TRAVELING TO YELLOW FEVER PRONE COUNTRY(LIKE AFRICA)?</P></a></li>
+          <li><a href="#COCCUS"><P class="p3">7. ARE YOU A COLLEGE STUDENT LIVING IN DORMITORIES, A MILITARY RECRUIT, TRAVELING ETC?</P></a></li>
+          <li><a href="#COCCAL"><P class="p3">8. IS YOUR AGE OVER 65 YEARS?</P></a></li>
+          <li><a href="#MMR"><P class="p3">9. DID YOU EVER RECIEVED MMR?</P></a></li>
+        </ul>
+        <br><br></b>
+
+        </div><br>
+
+  </section ><br><br><br>
+
+
+  <section data-aos="fade-in" align = "center">
+    <img src = "img2.jpg" width = "80%">
+  </section>
+  <br><br><br>
+
+
+      <section class = "bg3" id="vaccines">
+
+        <div data-aos="fade-in" class="he">
+          <h1 >VACCINES FOR ADULTS</h1></div><br>
+          <p class = "p2" data-aos="fade-in">Adults also need to be vaccinated against certain diseases. Recommendations for adult vaccinations vary based on factors such as age, lifestyle, health conditions, and past vaccinations. It's important for adults to talk to their healthcare provider to determine which vaccines they need and when to receive them. </p><br><br>
+
+          <a href = "https://www.cdc.gov/mmwr/volumes/68/wr/mm6832a3.htm" title="KNOW MORE"> <figure ID="HPV" class="card" data-aos="fade-in">
+            <div class="card_hero">
+              <img class = "card_image" src="vac1.jpg">
+              <div class="card_middle"><p class="card_middle-text">HPV VACCINE</p></div>
+            </div>
+            <div class="card_content">
+              <div class="card_info">
+                <h5 class="card_price"><b>IS YOUR AGE LESS THAN 26 YEARS?</b></h5>
+                <p class="card_address"><b>The HPV (Human Papillomavirus) vaccine is recommended for both males and females. It is a safe and effective vaccine that protects against several strains of HPV that can cause cancer, such as cervical, vulvar, and oropharyngeal cancer.<br><br>
+
+                  The Centers for Disease Control and Prevention (CDC) recommends the HPV vaccine for all individuals aged 11-12 years old, and for anyone aged 13-26 who has not yet been vaccinated or completed the vaccine series. Some adults aged 27-45 may also benefit from receiving the vaccine, based on their health status<br><br>
+                  
+                  It is important for individuals to talk to their healthcare provider about their specific risk factors and needs for the HPV vaccine. The vaccine is given in a series of two or three shots, depending on the individual's age at the time of first vaccination.</b>
+                  
+                  
+                  
+                  </p>
+              </div>
+            </div>
+          </figure></a>
+          <br><br>
+
+
+         <a href = "https://www.cdc.gov/flu/professionals/vaccination/vax-summary.htm" title="KNOW MORE" target="_blank">
+           <figure class="card" data-aos="fade-in" ID="FLU">
+            <div class="card_hero">
+              <img class = "card_image" src="vac2.jpg">
+              <div class="card_middle"><p class="card_middle-text">INFLUENZA VACCINE</p></div>
+            </div>
+            <div class="card_content">
+              <div class="card_info">
+                <h5 class="card_price"><b>WHEN DID YOU LAST TOOK THE FLU VACCINE?</b></h5>
+                <p class="card_address"><b>The influenza vaccine is recommended for all adults, especially those who are at high risk of developing serious complications from the flu.<br><br>
+                 
+                  
+                    The vaccine is usually available in two forms: the injected flu shot and the nasal spray flu vaccine. The Centers for Disease Control and Prevention (CDC) recommends that everyone aged 6 months and older get a flu vaccine <U> every year </U>. It's important to note that flu vaccines may not be 100% effective in preventing the flu, but they can still help reduce the severity of symptoms and prevent flu-related hospitalizations and deaths.<br> 
+                    The vaccine is suggested to: <br><br>
+                    <ul class="lst1">
+                      <li>Older adults (65 years and older)</li>
+                      <li>People with chronic medical conditions (such as heart disease, diabetes, or lung disease)</li>
+                      <li>Pregnant women</li>
+                      <li>Health care workers</li>
+  
+                    </ul><br></b>
+                    
+                  </p>
+              </div>
+            </div>
+          </figure></a> 
+          <br><br>
+
+          <a href = "https://www.cdc.gov/vaccines/hcp/vis/vis-statements/tdap.html"title="KNOW MORE" target="_blank"> <figure class="card" data-aos="fade-in" ID="TDAP">
+            <div class="card_hero" class="overlay">
+              <img class = "card_image" src="vac3.jpg">
+              <div class="card_middle"><p class="card_middle-text"> TDAP VACCINE</p></div>
+            </div>
+            <div class="card_content">
+              <div class="card_info">
+                <h5 class="card_price"><b>WHEN DID YOU LAST TOOK TDAP VACCINE?</b></h5>
+                <p class="card_address"><b>The TDAP vaccine is a combination vaccine that protects against three diseases: tetanus, diphtheria, and pertussis (whooping cough). <br><br>The vaccine is recommended for adults, particularly those who have not received a TDAP vaccine previously or who have not received a tetanus booster in the last 10 years. Pregnant women are also encouraged to receive the TDAP vaccine during every pregnancy to protect themselves and their newborns.<br><br> Talk to your doctor to determine if the TDAP vaccine is right for you.</b>></p>
+              </div>
+            </div>
+          </figure></a>
+          <br><br>
+
+          <a href = "https://www.cdc.gov/vaccines/vpd/varicella/public/index.html" title="KNOW MORE" target="_blank"><figure class="card" data-aos="fade-in" ID="POX">
+            <div class="card_hero">
+              <img class = "card_image" src="vac4.jpg">
+              <div class="card_middle"><p class="card_middle-text">VARICELLA VACCINE</p></div>
+            </div>
+            <div class="card_content">
+              <div class="card_info">
+                <h5 class="card_price"><b>DID YOU EVER HAD CHICKEN POX?</b></h5>
+                <p class="card_address"><B>The varicella vaccine, also known as the chickenpox vaccine, is recommended for adults who have never had chickenpox or who have never been vaccinated against it.<br><br> The vaccine is usually given as two doses, with the second dose administered 4-8 weeks after the first. It's especially important for healthcare workers, teachers, and individuals with weakened immune systems to get vaccinated.<br><br> If you have a history of chickenpox, you are considered protected and do not need the vaccine. However, talk to your doctor to determine if the vaccine is right for you.</B></p>
+              </div>
+            </div>
+          </figure></a>
+          <br><br>
+
+
+
+          <a href = "https://www.cdc.gov/shingles/index.html" title="KNOW MORE" target="_blank"> <figure class="card" data-aos="fade-in" ID="ZOSTER">
+            <div class="card_hero">
+              <img class = "card_image" src="vac5.jpg">
+              <div class="card_middle"><p class="card_middle-text">HERPES ZOSTER</p></div>
+            </div>
+            <div class="card_content">
+              <div class="card_info">
+                <h5 class="card_price"><B>IS YOUR AGE OVER 50 YEARS?</B></h5>
+                <p class="card_address"><B>The herpes zoster vaccine, also known as the shingles vaccine, is recommended for adults age 50 and older to prevent shingles and its complications.<br><br> Shingles is a painful skin rash caused by the reactivation of the chickenpox virus. The herpes zoster vaccine has been shown to reduce the incidence and severity of shingles and its complications. It's usually given as a single dose.<br><br> Talk to your doctor to determine if the herpes zoster vaccine is right for you and to discuss the potential benefits and risks.</B></p>
+              </div>
+            </div>
+          </figure></a>
+          <br><br>
+
+
+
+          <a href = "https://www.cdc.gov/yellowfever/vaccine/index.html" title="KNOW MORE" target="_blank"> <figure class="card" data-aos="fade-in" ID="FEVER">
+            <div class="card_hero">
+              <img class = "card_image" src="vac6.jpg">
+              <div class="card_middle"><p class="card_middle-text">YELLOW FEVER VACCINE</p></div>
+            </div>
+            <div class="card_content">
+              <div class="card_info">
+                <h5 class="card_price">ARE YOU TRAVELING TO YELLOW FEVER PRONE COUNTRY(LIKE AFRICA)?</h5>
+                <p class="card_address"><B>The yellow fever vaccine is a live-attenuated virus vaccine that provides protection against yellow fever, a serious and sometimes fatal disease transmitted by mosquitoes. <br><br>The vaccine is recommended for adults traveling to or living in areas with a risk of yellow fever transmission, as well as for laboratory workers handling the yellow fever virus. The vaccine is usually given as a single dose and provides long-lasting immunity. However, it's important to consult a healthcare provider or a travel medicine clinic to determine if the vaccine is necessary and appropriate for you, based on your travel itinerary and medical history.</B></p>
+              </div>
+            </div>
+          </figure></a>
+          <br><br>
+
+
+
+          <a href = "https://www.cdc.gov/meningococcal/index.html" title="KNOW MORE" target="_blank"> <figure class="card" data-aos="fade-in" ID="COCCUS"> 
+            <div class="card_hero">
+              <img class = "card_image" src="vac7.jpg">
+              <div class="card_middle"><p class="card_middle-text">MENINGOCOCCUS VACCINE</p></div>
+            </div>
+            <div class="card_content">
+              <div class="card_info">
+                <h5 class="card_price"><B>ARE YOU A COLLEGE STUDENT LIVING IN DORMITORIES, A MILITARY RECRUIT, TRAVELING ETC?</B></h5>
+                <p class="card_address"><B>The meningococcal vaccine is a vaccine that provides protection against meningococcal disease, a serious bacterial illness that can cause meningitis and septicemia. There are different types of meningococcal vaccines available, each protecting against different strains of the bacterium. It's important to talk to your doctor to determine the most appropriate vaccine for you based on your age, medical history, and potential risk factors.<br>
+
+                  The vaccine is recommended for certain adults, including:<BR>
+                <UL class="lst1">
+                  <LI>College students living in dormitories</LI>
+                  <LI>Military personnel</LI>
+                  <LI>Travelers to countries where meningococcal disease is common</LI>
+                  <LI>Microbiologists who are routinely exposed to Neisseria meningitidis</LI>
+                  <LI>People with certain medical conditions that increase the risk of meningococcal disease
+                  </LI><BR>
+
+
+                </UL>
+                </B></p>
+              </div>
+            </div>
+          </figure></a>
+          <br><br>
+
+
+
+          <a href = "https://www.cdc.gov/vaccines/vpd/pneumo/index.html" title="KNOW MORE" target="_blank"> <figure class="card" data-aos="fade-in" ID="COCCAL">
+            <div class="card_hero">
+              <img class = "card_image" src="vac8.jpg">
+              <div class="card_middle"><p class="card_middle-text">PNEUMOCOCCAL VACCINE</p></div>
+            </div>
+            <div class="card_content">
+              <div class="card_info">
+                <h5 class="card_price"><B>IS YOUR AGE OVER 65 YEARS? </B></h5>
+                <p class="card_address"><B>Pneumococcal vaccine is recommended for adults to prevent pneumococcal disease, which is caused by the bacterium Streptococcus pneumoniae. <BR><BR>This vaccine helps protect against serious infections such as pneumonia, meningitis, and bloodstream infections. The vaccine is typically given as a single shot, and a booster dose may be needed after 5 years for some individuals. It is recommended for certain populations such as older adults, people with certain medical conditions, and smokers. <BR><BR>Speak with a healthcare provider to determine if the pneumococcal vaccine is right for you.
+
+
+
+                </B></p>
+              </div>
+            </div>
+          </figure></a>
+          <br><br>
+
+          <a href = "https://www.cdc.gov/vaccines/vpd/mmr/public/index.html" title="KNOW MORE" target="_blank"> <figure class="card" data-aos="fade-in" ID="MMR">
+            <div class="card_hero">
+              <img class = "card_image" src="vac9.jpg">
+              <div class="card_middle"><p class="card_middle-text">MMR VACCINE</p></div>
+            </div>
+            <div class="card_content">
+              <div class="card_info">
+                <h5 class="card_price"><B>DID YOU EVER RECIEVED MMR?</B></h5>
+                <p class="card_address"><B>The MMR (Measles, Mumps, and Rubella) vaccine is recommended for adults who have not been fully vaccinated or have uncertain vaccination status. The MMR vaccine is a safe and effective way to protect against these diseases, which can cause serious complications such as deafness, encephalitis, and pregnancy complications.<BR><BR>
+
+                  Adults who were born before 1957 are generally considered immune to these diseases due to widespread exposure. However, those who work in healthcare or travel internationally may still benefit from vaccination.<BR><BR>
+                  
+                  Two doses of the MMR vaccine are recommended for most adults, with the second dose given at least 28 days after the first. Speak with a healthcare provider to determine if the MMR vaccine is right for you and to determine your immunity status.</B></p>
+              </div>
+            </div>
+          </figure></a>
+          <br><br>
+
+        
+            </section>
+
+       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset:270,
+      duration:1750,
+    });
+  </script>
+
+  </body>
+</html>
